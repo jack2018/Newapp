@@ -1,0 +1,28 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+
+/*配置了驱动构建过程的代码。*/
+buildscript {
+    repositories {
+        /*声明使用测试库*/
+        jcenter()
+    }
+    dependencies {
+        /*声明了gradle2.3.2这个文件所依赖的路径*/
+        classpath 'com.android.tools.build:gradle:2.3.2'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {    //jcenter是一个由 bintray.com维护的Maven仓库
+    repositories {
+        jcenter()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+}
+
+task clean(type: Delete) {     /*清空项目的所有输出*/
+    delete rootProject.buildDir
+}
