@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
+
 android {
     compileSdkVersion 25     /*SDK版本*/
-    buildToolsVersion "25.0.3" /*编译工具版本*/
+    buildToolsVersion "25.0.0" /*编译工具版本*/
     sourceSets {      /*配置整个目录下的AIDL文件*/
         main {
             java.srcDirs = ['src/main/java']
@@ -39,6 +40,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+
         /*foo {
             *//*runProguard false*//*//对应的task将会自动创建
             minifyEnabled false
@@ -69,10 +71,14 @@ android {
             dirs 'libs'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile (name:'mylibrary-release', ext:'aar')
+    compile(name: 'mylibrary-release', ext: 'aar')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -81,7 +87,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //编译测试的module
     compile 'com.jakewharton:butterknife:8.5.1'
-
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     compile project(path: ':mylibrary')
 }
