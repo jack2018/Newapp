@@ -30,3 +30,26 @@ dependencies {
     compile 'com.inthecheesefactory.thecheeselibrary:fb-like:0.9.3'
     testCompile 'junit:junit:4.12'
 }
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'mylibrary'
+
+    publishedGroupId = 'com.inthecheesefactory.thecheeselibrary'
+    libraryName = 'Mylibrary'
+    artifact = 'jack2016'
+
+    libraryDescription = 'A wrapper for Facebook Native Like Button (LikeView) on Android'
+
+    siteUrl = 'https://github.com/jack2018/Newapp.git'
+    gitUrl = 'https://github.com/jack2018/Newapp.git'
+
+    libraryVersion = '0.9.3'
+
+    developerId = 'jack2018'
+    developerName = 'Sittiphol Phanvilai'
+    developerEmail = '610184089@qq.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
