@@ -79,7 +79,6 @@ public class AlignTextView extends android.support.v7.widget.AppCompatTextView {
         }
         super.onDraw(canvas);
     }
-
     /**
      * 计算后缀的宽度
      */
