@@ -24,8 +24,8 @@ android {
         }*/
         release {
             storeFile file("C:\\Users\\she\\she.jks")
-            storePassword RELEASE_STORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
+            storePassword "ssx456123"
+            keyAlias "xxx"
             keyPassword "123456"
         }
 
